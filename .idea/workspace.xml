@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86ddc51e-2cb0-4f97-936f-2a2d939a6c26" name="Changes" comment="Add directory handling realisation">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DecoderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ROTDecodeTest.java" afterDir="false" />
+    <list default="true" id="86ddc51e-2cb0-4f97-936f-2a2d939a6c26" name="Changes" comment="Add RC4 implementation">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/RC4EncodeDecodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CipherAlgoType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CipherAlgoType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Decoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Encoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ROTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ROTTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DecoderTest">
+  <component name="RunManager" selected="JUnit.RC4EncodeDecodeTest">
     <configuration name="DecoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoldCypher" />
       <extension name="coverage">
@@ -99,6 +97,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RC4EncodeDecodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FoldCypher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RC4EncodeDecodeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RC4EncodeDecodeTest.functionalTestRC4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FoldCypher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RC4EncodeDecodeTest" />
+      <option name="METHOD_NAME" value="functionalTestRC4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ROTDecodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoldCypher" />
       <extension name="coverage">
@@ -114,45 +143,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ROTTest.functionalTestROTDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FoldCypher" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ROTTest" />
-      <option name="METHOD_NAME" value="functionalTestROTDecode" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ROTTest.offsetLimitsTestRotDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FoldCypher" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ROTTest" />
-      <option name="METHOD_NAME" value="offsetLimitsTestRotDecode" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RC4EncodeDecodeTest" />
+        <item itemvalue="JUnit.RC4EncodeDecodeTest.functionalTestRC4" />
         <item itemvalue="JUnit.DecoderTest" />
         <item itemvalue="JUnit.ROTDecodeTest" />
         <item itemvalue="JUnit.EncoderTest" />
-        <item itemvalue="JUnit.ROTTest.functionalTestROTDecode" />
-        <item itemvalue="JUnit.ROTTest.offsetLimitsTestRotDecode" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696406457614</updated>
-      <workItem from="1696406458859" duration="10346000" />
+      <workItem from="1696406458859" duration="19879000" />
     </task>
     <task id="LOCAL-00001" summary="Add rot Tests">
       <created>1696410250386</created>
@@ -187,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696416784676</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add decoder basic functionality and ROT decoder">
+      <created>1696418612797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696418612797</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +201,8 @@
     <MESSAGE value="Add rot Tests" />
     <MESSAGE value="Add ROT realisation" />
     <MESSAGE value="Add directory handling realisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add directory handling realisation" />
+    <MESSAGE value="Add decoder basic functionality and ROT decoder" />
+    <MESSAGE value="Add RC4 implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RC4 implementation" />
   </component>
 </project>

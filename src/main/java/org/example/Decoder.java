@@ -1,9 +1,15 @@
 package org.example;
 
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class Decoder {
@@ -28,6 +34,11 @@ public class Decoder {
                         Integer.parseInt(params.get("offset")));
                 Files.write(Paths.get(fileInDirectory.toURI()), result);
             }
+            case RC4 -> {
+                List<String> result = RC4(Files.readAllLines(fileInDirectory.toPath()),
+                        params.get("key"));
+                Files.write(Paths.get(fileInDirectory.toURI()), result);
+            }
         }
     }
 
@@ -40,6 +51,22 @@ public class Decoder {
                 res[i] = (char) (line.charAt(i) - (char)offset);
             }
             result.add(String.valueOf(res));
+        }
+        return result;
+    }
+
+    public List<String> RC4(List<String> strings, String keyString) {
+        List<String> result = new ArrayList<>();
+        try {
+            Cipher RC4 = Cipher.getInstance("RC4");
+            RC4.init(Cipher.DECRYPT_MODE, new SecretKeySpec(keyString.getBytes(StandardCharsets.UTF_8), "RC4"));
+            for(String line : strings) {
+                byte[] lineBytes = Base64.getDecoder().decode(line);
+                lineBytes = RC4.update(lineBytes);
+                result.add(new String(lineBytes, StandardCharsets.UTF_8));
+            }
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException e) {
+            throw new RuntimeException(e);
         }
         return result;
     }
