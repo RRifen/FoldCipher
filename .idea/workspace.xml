@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86ddc51e-2cb0-4f97-936f-2a2d939a6c26" name="Changes" comment="Add ROT realisation">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CipherAlgoType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ROTTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/input.txt" afterDir="false" />
+    <list default="true" id="86ddc51e-2cb0-4f97-936f-2a2d939a6c26" name="Changes" comment="Add directory handling realisation">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DecoderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ROTDecodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Decoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Encoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EncoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ROTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ROTTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,22 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EncoderTest">
+  <component name="RunManager" selected="JUnit.DecoderTest">
+    <configuration name="DecoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FoldCypher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DecoderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EncoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoldCypher" />
       <extension name="coverage">
@@ -84,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncoderTest.functionalTestApplyForDirectoryFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ROTDecodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoldCypher" />
       <extension name="coverage">
         <pattern>
@@ -93,30 +108,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EncoderTest" />
-      <option name="METHOD_NAME" value="functionalTestApplyForDirectoryFiles" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ROTDecodeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EncoderTest.testApplyForDirectoryFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FoldCypher" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EncoderTest" />
-      <option name="METHOD_NAME" value="testApplyForDirectoryFiles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ROTTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ROTTest.functionalTestROTDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoldCypher" />
       <extension name="coverage">
         <pattern>
@@ -126,17 +124,35 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.ROTTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="functionalTestROTDecode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ROTTest.offsetLimitsTestRotDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FoldCypher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ROTTest" />
+      <option name="METHOD_NAME" value="offsetLimitsTestRotDecode" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DecoderTest" />
+        <item itemvalue="JUnit.ROTDecodeTest" />
         <item itemvalue="JUnit.EncoderTest" />
-        <item itemvalue="JUnit.EncoderTest.functionalTestApplyForDirectoryFiles" />
-        <item itemvalue="JUnit.EncoderTest.testApplyForDirectoryFiles" />
-        <item itemvalue="JUnit.ROTTest" />
+        <item itemvalue="JUnit.ROTTest.functionalTestROTDecode" />
+        <item itemvalue="JUnit.ROTTest.offsetLimitsTestRotDecode" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696406457614</updated>
-      <workItem from="1696406458859" duration="8400000" />
+      <workItem from="1696406458859" duration="10346000" />
     </task>
     <task id="LOCAL-00001" summary="Add rot Tests">
       <created>1696410250386</created>
@@ -164,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696410747689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add directory handling realisation">
+      <created>1696416784676</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696416784676</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +196,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add rot Tests" />
     <MESSAGE value="Add ROT realisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ROT realisation" />
+    <MESSAGE value="Add directory handling realisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add directory handling realisation" />
   </component>
 </project>

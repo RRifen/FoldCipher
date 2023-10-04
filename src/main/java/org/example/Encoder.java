@@ -30,9 +30,6 @@ public class Encoder {
         }
     }
 
-
-
-
     public List<String> ROT(List<String> strings, int offset) throws IllegalArgumentException {
         if (offset < 0 || offset > 255) throw new IllegalArgumentException("Illegal argument #offset");
         List<String> result = new ArrayList<>();
